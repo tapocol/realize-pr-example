@@ -1,0 +1,37 @@
+settings:
+  legacy:
+    force: false
+    interval: 0s
+schema:
+- name: example1
+  path: cmd/example1
+  env:
+    FOO: ONE
+  commands:
+    run:
+      status: true
+  watcher:
+    extensions:
+    - go
+    paths:
+    - ../../
+    ignored_paths:
+    - .git
+    - .realize
+    - vendor
+- name: example2
+  path: cmd/example2
+  env:
+    FOO: TWO
+  commands:
+    run:
+      status: true
+  watcher:
+    extensions:
+    - go
+    paths:
+    - ../../
+    ignored_paths:
+    - .git
+    - .realize
+    - vendor
